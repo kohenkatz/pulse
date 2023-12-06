@@ -58,7 +58,6 @@ it('does not round numbers up', function () {
     Pulse::store();
 
     Livewire::test(Cache::class, ['lazy' => false])
-        ->dump()
         ->assertDontSeeHtml("100.00%\n")
         ->assertSeeHtml("99.99%\n");
 });
